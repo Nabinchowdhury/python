@@ -6,14 +6,16 @@ count = 0
 def revNumber (number, reverse):
     if int(number/10) != 0:
         remainder = number % 10
-        if reverse == 0 and remainder == 0 :
-            reverse = reverse
-        else : reverse = reverse*10 + remainder
+        # if reverse == 0 and remainder == 0 :
+        #     reverse = reverse
+        # else : reverse = reverse*10 + remainder
+        reverse = reverse*10 + remainder
         return revNumber(int(number/10), reverse)
     else:
         reverse =reverse*10 + number
     return reverse
 reversed_number = revNumber(num, rev)
+# print('reversed_number', reversed_number)
 if len(num_str) > 1:
     print(num_str[::-1].lstrip('0'))
 else: print(num_str)
