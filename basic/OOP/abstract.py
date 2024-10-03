@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-#abc = abstract base class
+#abc = abstract base class 
 class Animal(ABC):
     @abstractmethod
     def eat(self):
